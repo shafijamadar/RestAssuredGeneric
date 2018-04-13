@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-
+import static org.hamcrest.Matchers.equalTo;
 import static io.restassured.RestAssured.given;
 
 public class GetResponseValidate {
@@ -27,13 +27,13 @@ public class GetResponseValidate {
 			 when().
 			 get("/maps/api/place/nearbysearch/json").
 			 then().assertThat().statusCode(200).and().
-			 contentType(ContentType.XML);
+			 contentType(ContentType.JSON).
 			
-			/*.and().
+			and().
 			 body("results[0].name", equalTo("The Little Snail Restaurant")).and().
 			 body("results[13].name", equalTo("Harvest Buffet")).and().
 			 body("results[5].vicinity", equalTo("80 Pyrmont Street, Pyrmont")).and().
-			 header("server", "pablo");*/
+			 header("server", "pablo");
 			
 			System.out.println("Request is " );
 		}
