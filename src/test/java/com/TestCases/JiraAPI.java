@@ -29,11 +29,11 @@ public class JiraAPI {
 		System.out.println("********************Response JSON is**************");
 		System.out.println(strResponse);
 		
-		/*JsonPath jsonRes = new JsonPath(strResponse);
+		JsonPath jsonRes = new JsonPath(strResponse);
 		
 		String sessionID = jsonRes.getString("session.value");
 		
 		System.out.println(sessionID);
-*/				
+				
 	}
 }

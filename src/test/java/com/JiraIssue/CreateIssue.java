@@ -26,7 +26,7 @@ public class CreateIssue {
 		String URI = URL.getEndPoint("/rest/api/2/issue");
 		String createIssuePayload = PayloadConvertor.generatePayLoadString("CreateBug.json");
 		
-		 response = RESTCalls.POSTRequest(URI, createIssuePayload, sessionID);
-		 BaseAssertions.verifyStatuCode(response, 200);
+		response = RESTCalls.POSTRequest(URI, createIssuePayload, sessionID);
+		BaseAssertions.verifyStatuCode(response, 200);
 	}
 }
