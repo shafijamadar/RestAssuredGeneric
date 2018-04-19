@@ -6,6 +6,7 @@ public class URL {
 			//"http://localhost:8080"; 
 	public static String SouthseasgamingURI = "http://southseasgaming.microgaming.com/"; 
 
+	// JIRA URL -https://docs.atlassian.com/software/jira/docs/api/REST/1000.1568.0/
 
 	public String getEndPoint(){
 
