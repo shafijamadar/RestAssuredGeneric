@@ -2,14 +2,17 @@ package com.Utility;
 
 public class URL {
 
-	public static String URL = "http://localhost:8080"; // 
+	public static String URL = "http://southseasgaming.microgaming.com/";
+			//"http://localhost:8080"; 
+	public static String SouthseasgamingURI = "http://southseasgaming.microgaming.com/"; 
 
-	public static String getEndPoint(){
+
+	public String getEndPoint(){
 
 		return URL;
 	}
 
-	public static String getEndPoint(String resource){
+	public String getEndPoint(String resource){
 
 		URL = URL+ resource;
 		System.out.println(URL);

@@ -10,13 +10,13 @@ public class RESTCalls {
 	/*
 	 * This class is responsible to fire requests
 	 */
-
-	public static Response GETRequest(String URI){
+	public static Response GETRequest(String URI, String token){
 
 		//RequestSepcification is an interface 
 
 		RequestSpecification requestSpecification = RestAssured.given();
 		requestSpecification.contentType(ContentType.JSON);
+		requestSpecification.header("Authorisation", token);
 		Response response = requestSpecification.get(URI);
 		return response;
 	}
@@ -24,10 +24,8 @@ public class RESTCalls {
 	public static Response POSTRequest(String URI, String strJSON){
 
 		RequestSpecification requestSpecification = RestAssured.given().body(strJSON);
-
 		requestSpecification.contentType(ContentType.JSON);
-
-		Response response = requestSpecification.post();
+		Response response = requestSpecification.post(URI);
 		return response;
 	}
 	
@@ -38,7 +36,7 @@ public class RESTCalls {
 		requestSpecification.contentType(ContentType.JSON);
 		requestSpecification.header("cookie", "JSESSIONID=" +sessionID+"" );
 
-		Response response = requestSpecification.get(URI);
+		Response response = requestSpecification.post(URI);
 		return response;
 	}
 
@@ -49,7 +47,7 @@ public class RESTCalls {
 		requestSpecification.contentType(ContentType.JSON);
 		requestSpecification.header("cookie", "JSESSIONID=" +sessionID+"" );
 
-		Response response = requestSpecification.get(URI);
+		Response response = requestSpecification.put(URI);
 		return response;
 	}
 
@@ -59,7 +57,7 @@ public class RESTCalls {
 
 		requestSpecification.contentType(ContentType.JSON);
 
-		Response response = requestSpecification.get(URI);
+		Response response = requestSpecification.delete(URI);
 		return response;
 	}
 }

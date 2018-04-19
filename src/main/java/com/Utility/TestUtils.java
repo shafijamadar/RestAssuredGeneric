@@ -11,8 +11,8 @@ public class TestUtils {
 		return strResponse;
 	}
 	
-	public static JsonPath jsonParser(String response){
-		JsonPath jsonResponse = new JsonPath(response);
+	public static JsonPath jsonParser(String strResponse){
+		JsonPath jsonResponse = new JsonPath(strResponse);
 		return jsonResponse;	
 	}
 	
