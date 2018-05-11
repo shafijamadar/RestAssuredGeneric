@@ -8,12 +8,12 @@ public class URL {
 
 	// JIRA URL -https://docs.atlassian.com/software/jira/docs/api/REST/1000.1568.0/
 
-	public String getEndPoint(){
+	public static String getEndPoint(){
 
 		return URL;
 	}
 
-	public String getEndPoint(String resource){
+	public static String getEndPoint(String resource){
 
 		URL = URL+ resource;
 		System.out.println(URL);
